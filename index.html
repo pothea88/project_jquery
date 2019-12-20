@@ -16,39 +16,23 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light shadow-lg justify-content-center ">
+    <nav class="navbar navbar-light bg-light shadow-lg justify-content-center">
+        <a class="navbar-brand" href="#">
+            <img src="images/recipe.png" alt="Logo" style="width:80px;">
+        </a>
         <form class="form-inline ">
             <div class="form-group ">
-                <select name="select" id="selected" class="form-control alert-primary">
+                <select name="select" id="selected" class="form-control alert-danger">
                     <option value="" disabled selected>Choose recipes...</option>
                 </select>
             </div>
         </form>
     </nav>
-    <div class="container mt-5 shadow-lg" id="picture" >
+    <div class="container mt-1">
         <div class="row">
             <div class="col-2"></div>
-            <div class="col-4" >
-                <h4 class="text-center">Avocado Shake (Toek KaLok)</h4>
-                <img src="images/toek klok.png" class="img-fluid rounded" width="350" height="350">
-            </div>
-            
-            <div class="col-4">
-                <h4 class="text-center">French creps</h4>
-                <img src="images/Crepes_Recipe.png" class="img-fluid rounded" width="350" height="350">
-            </div>
-            <div class="col-2"></div>
-
-        </div>
-        <div class="row mt-5">
-            <div class="col-2"></div>
-            <div class="col-4">
-                <h4 class="text-center">Chean Saom with eggs</h4>
-                <img src="images/chean saom.png" class="img-fluid rounded" width="400" height="350">
-            </div>
-            <div class="col-4">
-                <h4 class="text-center">Fry Fish</h4>
-                <img src="images/fry fish.png" class="img-fluid rounded" width="500" height="350">
+            <div class="col-8">
+                <!-- <img src="images/toek klok.png" width="1000"> -->
             </div>
             <div class="col-2"></div>
         </div>
@@ -56,7 +40,7 @@
     <div class="container mt-5">
         <div class="row " id="hide">
             <div class="col-3"></div>
-            <div class="col-6 shadow-lg">
+            <div class="col-6">
                 <div id="result"></div>
                 <form>
                     <div class="container mt-5">
@@ -79,14 +63,14 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-sm-4 shadow-lg">
+            <div class="col-sm-4 ">
                 <table class="table">
                     <thead id="getGredient">
                     </thead>
                 </table>
             </div>
             <div class="col-2"></div>
-            <div class="col-sm-4 shadow-lg">
+            <div class="col-sm-4 ">
                 <h5 id="instruction" class="text-primary"></h5>
                 <table class="table">
                     <thead id="getStep"></thead>
