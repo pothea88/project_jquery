@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery_project</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgICAgHCAgHBwcHBwoHBwcHBw8ICQcKFREiFhURExMYKCggGCYlJxMfITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDisZFRkrNystLS03KysrKzcrKy0rKzcrKysrNysrKysrKysrKy0tKysrKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAbAAEBAQEBAQEBAAAAAAAAAAAAAQIDBAUHBv/EAB0QAQEBAQEAAgMAAAAAAAAAAAABEQIDMWEEEiH/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQIEAwUG/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAERAgP/2gAMAwEAAhEDEQA/AP1pYitOhQUQVFEFRUQVFEURUCKgIoggoAAAAAigIAAAAKIIKAKAuIIoAKCDyRUV7vUUBBYioyKioCosEFQEUSKgAAACCoqAAAACoAKAAKIAKgCgBiiBiiorxAOh6KAiCoogAiKsQEURUAAQICCgAAAKgCiKAACgQFAQFRUFiooAogKCDxAOh6ioqMgCIsBRABAAEWAIAAAAKAAAACgigAsBBQAVWViDQkVBRFBVRUHgVCOh6qAiKsRRBQRAWCIQAAUEQUAAAUVBBQEFAQUAUEAIICxFQWCLAURUFVnV1nR4YsY1ZXU9sbVmVoZURYiKAIoCACiCggAACggKIAACKIIKAAIACAAmiiCaqqyM6NGs6amj586anThOm507sdV5d50uuMrcqMY6/ssrlK1KjNjousSrozjSsqiY0CxEFAQFEEUUQAQQUQQUQQUABEABnQoCaogjOimojOq0iaiaPjzt056ePnt156fSfQvL1c9Ok6ebnp0lHneXeVuVx5rpKjzsdJWoxGojFjcajMbiMUWCxEUFRlFBAAEAEAEQUQ1BUEZFNTUQXRNNRVRNNZFRNNZqhqaM2qAM2j+W49Ho47fM8vR6/Pt9Z9jrh7+OnXmvJ59vRx0jn6j0c115cOK7c1Hj1HWNxjl05R5VqNxmNxGKsWIqMqKCICoiAiCoIgpqWpqCiamsi6azpqCiamsqpqams0a1NTU1mq1qGprNoogzaqiDGj8/8fV7vH0fC8Pf4fQ8PZ9h+h9OH2PLt6uOny/H0e3z9Bx98voefTvxXj8+3o46RzdR6+a68vPz07cdI8Oo6xuOfNdIjzrSwijIKIiCpUERWbUCpalTUF1LUtZtSri6axpayY1qaxaazVxvU1jTWTG9NY01mrjemsausUxrVY1dZo1oyrFoqxBm0fj/AOP7fH9fS/H9vsH2X6z15j6Ph7fb3eXqCOD05j2+Xo9fn6IDj7j1cdO/nQRzdR35rrAHhXTlpAYrSUEQZAEtZtBFZtZtBlWbWLVGarOpoM1U1NBmhpoM0NNBiqumgzRZVgMVFUGKLFBmo//Z");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light shadow-lg justify-content-center ">
+        <form class="form-inline ">
+            <div class="form-group ">
+                <select name="select" id="selected" class="form-control alert-primary">
+                    <option value="" disabled selected>Choose recipes...</option>
+                </select>
+            </div>
+        </form>
+    </nav>
+    <div class="container mt-5 shadow-lg" id="picture" >
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4" >
+                <h4 class="text-center">Avocado Shake (Toek KaLok)</h4>
+                <img src="images/toek klok.png" class="img-fluid rounded" width="350" height="350">
+            </div>
+            
+            <div class="col-4">
+                <h4 class="text-center">French creps</h4>
+                <img src="images/Crepes_Recipe.png" class="img-fluid rounded" width="350" height="350">
+            </div>
+            <div class="col-2"></div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-2"></div>
+            <div class="col-4">
+                <h4 class="text-center">Chean Saom with eggs</h4>
+                <img src="images/chean saom.png" class="img-fluid rounded" width="400" height="350">
+            </div>
+            <div class="col-4">
+                <h4 class="text-center">Fry Fish</h4>
+                <img src="images/fry fish.png" class="img-fluid rounded" width="500" height="350">
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row " id="hide">
+            <div class="col-3"></div>
+            <div class="col-6 shadow-lg">
+                <div id="result"></div>
+                <form>
+                    <div class="container mt-5">
+                        <div class="input-group mb-3">
+                            <h6>Number of persons :</h6>
+                            <div class="input-group-append" style="margin-left: 20px;">
+                                <input type="button" id="decrease" value="-" class="text-primary border-primary">
+                            </div>
+                            <div id="getInput"></div>
+                            <div class="input-group-append">
+                                <input type="button" id="increase" value="+" class="text-primary border-primary">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-sm-4 shadow-lg">
+                <table class="table">
+                    <thead id="getGredient">
+                    </thead>
+                </table>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-sm-4 shadow-lg">
+                <h5 id="instruction" class="text-primary"></h5>
+                <table class="table">
+                    <thead id="getStep"></thead>
+                </table>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
