@@ -81,9 +81,9 @@ var computeRecipe = (outPut) => {
 } 
 
 //get instruction
-var get = (datai) => {
+var get = (dataIn) => {
     var result = "";
-    var cutStep = datai.split("<step>");
+    var cutStep = dataIn.split("<step>");
     for(let i = 1; i< cutStep.length; i++){
         result +=`
             <tr>
@@ -133,7 +133,7 @@ function minusNumber(getMi) {
         calculateGuest($('#number').val());
     }
 }
-//calulate quantity with number of guest
+//caculate quantity with number of guest
 var calculateGuest = (cal) => {
     var getGuest = getNumberGuest;
     var calculate = "";
