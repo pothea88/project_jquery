@@ -9,6 +9,7 @@ $(document).ready(function () {
         minusNumber(getOldVal);
     });
     $("#hide").hide();
+    
 });
 //get api
 var requestApi = () => {
@@ -65,8 +66,8 @@ var computeRecipe = (outPut) => {
         var getStep = "";
         getOutPut += `
         <h3 style="font-size:25px;">
-            ${outPut.name}
-            <img src="${outPut.iconUrl}" width="200" class="img-fluid rounded">
+            ${outPut.name} <br><br>
+            <img src="${outPut.iconUrl}" width="300" class="img-fluid img-thumbnail mx-auto d-block">
         </h3> 
     `;
     getNumber += `
@@ -86,7 +87,7 @@ var get = (dataIn) => {
     var cutStep = dataIn.split("<step>");
     for(let i = 1; i< cutStep.length; i++){
         result +=`
-            <tr>
+            <tr">
                 <td>
                     <h6 class="text-primary">step:${i}</h6>
                     <p>${cutStep[i]}</p>
@@ -155,6 +156,7 @@ var calculateGuest = (cal) => {
     });
     $('#getGredient').html(result);
 }
+//slide show
 
 
 
