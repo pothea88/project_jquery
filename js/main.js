@@ -3,11 +3,13 @@ $(document).ready(function () {
     $("#increase").on('click', function () {
         var oldVal = $('#number').val();
         addNumber(oldVal);
+      
     });
     $("#decrease").on('click', function () {
         var getOldVal = $('#number').val();
         minusNumber(getOldVal);
     });
+    
     $("#hide").hide();
     
 });
@@ -48,7 +50,6 @@ var getRecipe = (data) => {
     data.forEach(element => {
         $("#selected").on('change',function(){
             $("#hide").show();
-            $('#picture').hide();
             var selectId = $('#selected').val();
             if(element.id == selectId){
                 computeRecipe(element);
