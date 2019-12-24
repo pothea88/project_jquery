@@ -156,7 +156,7 @@ var calculateGuest = (cal) => {
     });
     $('#getGredient').html(result);
 }
-//slide show
+
 
 
 
